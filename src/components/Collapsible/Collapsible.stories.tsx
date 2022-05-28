@@ -10,13 +10,24 @@ export default {
 
 const Template: ComponentStory<typeof Collapsible> = (args) => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleOpen =  () => {
-      setIsOpen(prevState => !prevState)
-  }
+  const toggleOpen = () => {
+    setIsOpen((prevState) => !prevState);
+  };
   return (
+    <>
     <Collapsible {...args} isOpen={isOpen} onClick={toggleOpen}>
-      <label>Welcome</label>
+      <ul>
+        <li>Welcome</li>
+        <li>Welcome</li>
+        <li>Welcome</li>
+        <li>Welcome</li>
+        <li>Welcome</li>
+        <li>Welcome</li>
+        <li>Welcome</li>
+      </ul>
     </Collapsible>
+    <div className={'relative'}>Hello there</div>
+    </>
   );
 };
 

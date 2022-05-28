@@ -2,7 +2,9 @@ import React from "react";
 import cx from "classnames";
 import s from "./Collapsible.module.scss";
 
-interface CollapsibleProps {
+import { FiChevronLeft, FiChevronDown } from "react-icons/fi";
+
+export interface CollapsibleProps {
   header: React.ReactNode;
   isOpen: Boolean;
   onClick: () => void;
@@ -17,12 +19,17 @@ const Collapsible = ({
   children,
   className,
 }: CollapsibleProps) => {
+  const style = isOpen ? s["slide-down"] : s["slide-up"];
+
   return (
-    <div>
-      <div className={cx(s.header, className)} onClick={onClick}>
+    <div className={cx(s.container)}>
+      <div className={cx(s.header)} onClick={onClick}>
         {header}
+        {isOpen ? <FiChevronDown /> : <FiChevronLeft />}
       </div>
-      {isOpen && <div className={s.content}>{children}</div>}
+      <div className={style}>
+        <div className={cx(s.content)}>{children}</div>
+      </div>
     </div>
   );
 };
