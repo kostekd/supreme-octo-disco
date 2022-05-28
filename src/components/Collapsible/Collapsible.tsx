@@ -5,12 +5,33 @@ import s from "./Collapsible.module.scss";
 import { FiChevronLeft, FiChevronDown } from "react-icons/fi";
 
 export interface CollapsibleProps {
+  /**
+   * What label should be displayed in the header
+   */
   header: React.ReactNode;
+  /**
+   * Is Collapsible Open (Lifting up state)
+   */
   isOpen: Boolean;
+  /**
+   * Function that toggle the visibility state
+   */
   onClick: () => void;
+  /**
+   * Standard children props
+   */
   children?: React.ReactNode;
+  /**
+   * Additional styling
+   */
   className?: string;
 }
+
+/**
+ *
+ * @author Dominik Kostencki
+ * @description Collapsible UI component
+ */
 
 const Collapsible = ({
   header,
