@@ -1,0 +1,29 @@
+.container{
+    @apply overflow-hidden font-sans;
+}
+
+.header{
+    @apply flex items-center justify-between;
+    @apply bg-lime-300 p-2;
+
+    &:hover{
+        @apply bg-lime-500 cursor-pointer;
+    }
+}
+
+.content{
+    @apply flex items-center justify-center;
+    @apply bg-gray-100 p-2;
+}
+
+.slide-up, .slide-down {
+  overflow:hidden
+}
+.slide-up > div{
+  margin-top: -30%;
+  transition: margin-top 0.4s ease-in-out;
+}
+.slide-down > div {            
+  margin-top: 0;
+  transition: margin-top 0.4s ease-in-out;
+} 
