@@ -40,7 +40,7 @@ const TemplateAdvanced: ComponentStory<typeof Collapsible> = (args) => {
   return (
     <>
       <Collapsible {...args} isOpen={isOpen} onClick={toggleOpen}>
-        <h2>Do whatever you want with this button</h2>
+        <h4>Do whatever you want with this button</h4>
         <Button label="Click me!" size="small" />
       </Collapsible>
       <div className={"relative"}>Hello there</div>
