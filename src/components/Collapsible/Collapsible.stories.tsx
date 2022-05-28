@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Collapsible } from "./Collapsible";
+import { Button } from "../Button/Button";
 
 export default {
   component: Collapsible,
@@ -15,23 +16,43 @@ const Template: ComponentStory<typeof Collapsible> = (args) => {
   };
   return (
     <>
-    <Collapsible {...args} isOpen={isOpen} onClick={toggleOpen}>
-      <ul>
-        <li>Welcome</li>
-        <li>Welcome</li>
-        <li>Welcome</li>
-        <li>Welcome</li>
-        <li>Welcome</li>
-        <li>Welcome</li>
-        <li>Welcome</li>
-      </ul>
-    </Collapsible>
-    <div className={'relative'}>Hello there</div>
+      <Collapsible {...args} isOpen={isOpen} onClick={toggleOpen}>
+        <ul>
+          <li>Welcome</li>
+          <li>Welcome</li>
+          <li>Welcome</li>
+          <li>Welcome</li>
+          <li>Welcome</li>
+          <li>Welcome</li>
+          <li>Welcome</li>
+        </ul>
+      </Collapsible>
+      <div className={"relative"}>Hello there</div>
+    </>
+  );
+};
+
+const TemplateAdvanced: ComponentStory<typeof Collapsible> = (args) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleOpen = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+  return (
+    <>
+      <Collapsible {...args} isOpen={isOpen} onClick={toggleOpen}>
+        <h2>Do whatever you want with this button</h2>
+        <Button label="Click me!" size="small" />
+      </Collapsible>
+      <div className={"relative"}>Hello there</div>
     </>
   );
 };
 
 export const Basic = Template.bind({});
+export const Advanced = TemplateAdvanced.bind({});
 Basic.args = {
   header: <label>Go In!</label>,
 };
+Advanced.args = {
+  header: <>This is an advanced version</>
+}

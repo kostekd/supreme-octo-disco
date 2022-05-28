@@ -12,7 +12,7 @@ export interface ButtonProps {
   /**
    * What size should the button be?
    */
-  size: ButtonSize;
+  size?: ButtonSize;
   /**
    * What should happend when button is being clicked?
    */
