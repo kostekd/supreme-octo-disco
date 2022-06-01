@@ -12,15 +12,15 @@ export interface CollapsibleProps {
   /**
    * Is Collapsible Open (Lifting up state)
    */
-  isOpen: Boolean;
+  isOpen?: Boolean;
   /**
    * Function that toggle the visibility state
    */
-  onClick: () => void;
+  onClick?: () => void;
   /**
    * Standard children props
    */
-  children?: React.ReactNode;
+  children: React.ReactNode;
   /**
    * Additional styling
    */

@@ -20,8 +20,8 @@ export interface ButtonProps {
 }
 
 /**
- * 
- * @author Dominik Kostencki 
+ *
+ * @author Dominik Kostencki
  * @description Primary button UI component
  */
 
