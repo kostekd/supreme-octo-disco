@@ -1,0 +1,11 @@
+.toast{
+    @apply absolute flex-col;
+    @apply w-64 bg-red-700;
+}
+
+.content{
+
+}
+.loading{
+    @apply h-2.5 bg-red-400;
+}
