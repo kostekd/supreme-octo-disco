@@ -16,7 +16,7 @@ describe('Button', () => {
 
     test('should call onClick', () => {
         const onClick = jest.fn();
-        initProps = {...initProps, onClick}
+        initProps = {...initProps, onClick};
         render(<Button {...initProps}/>);
 
         screen.getByText(initProps.label).click()

@@ -4,10 +4,6 @@ import { Accordion, AccordionProps } from "./Accordion";
 import { ActionTypeAccordion } from "./reducer/reducer";
 
 describe("Accordion", () => {
-    // const [isOpen, setIsOpen] = useState(false);
-    // const toggleOpen = () => {
-    //   setIsOpen((prevState) => !prevState);
-    // };
 
   let initProps: AccordionProps = {
     collapsibles: [

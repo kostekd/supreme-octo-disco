@@ -1,11 +1,15 @@
 .toast{
-    @apply absolute flex-col;
-    @apply w-64 bg-red-700;
-}
+    @apply text-white font-semibold font-sans bg-red-600;
 
-.content{
+    &--success{
+        @apply bg-green-500;
+    }
 
-}
-.loading{
-    @apply h-2.5 bg-red-400;
+    &--warning{
+        @apply bg-yellow-500;
+    }
+
+    &--error{
+        @apply bg-red-500;
+    }
 }
