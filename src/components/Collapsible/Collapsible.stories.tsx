@@ -54,5 +54,5 @@ Basic.args = {
   header: <label>Go In!</label>,
 };
 Advanced.args = {
-  header: <>This is an advanced version</>
-}
+  header: <>This is an advanced version</>,
+};
