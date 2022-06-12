@@ -16,9 +16,9 @@ const Template: ComponentStory<typeof Modal> = (args) => {
   const { isOpen, handleModal } = useModal();
   return (
     <>
-      <div id="modal-root"></div>
+      <div id="test"></div>
       <Button label="Show Modal" onClick={handleModal}/>
-      <Modal {...args} isOpen={isOpen} handleModal={handleModal}>
+      <Modal {...args} isOpen={true} handleModal={handleModal} destination='#test'>
         <h3>This modal is generally awesome</h3>
         <ul>
             <li>This is cool</li>

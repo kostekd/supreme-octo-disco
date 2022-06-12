@@ -1,11 +1,11 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import s from "./Modal.module.scss";
 import cx from "classnames";
 import ReactDOM from "react-dom";
 
 import { AiOutlineClose } from "react-icons/ai";
 
-interface ModalProps {
+export interface ModalProps {
   /**
    * Current state of modal visible/hidden
    */
