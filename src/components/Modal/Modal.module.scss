@@ -1,0 +1,12 @@
+.modal{
+    @apply fixed top-0 left-0 h-screen w-full flex items-center justify-center;
+    background: rgba(0,0,0,0.8);
+
+    &--content{
+        @apply bg-white relative p-3 shadow-lg rounded flex flex-col items-start;
+
+        &--button {
+            @apply flex w-full justify-end;
+        }
+    }
+}
