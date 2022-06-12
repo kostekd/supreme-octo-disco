@@ -3,10 +3,14 @@
     background: rgba(0,0,0,0.8);
 
     &--content{
-        @apply bg-white relative p-3 shadow-lg rounded flex flex-col items-start;
+        @apply bg-white font-sans relative p-3 shadow-lg rounded flex flex-col items-start;
 
         &--button {
             @apply flex w-full justify-end;
         }
     }
+}
+
+.icon:hover{
+    @apply cursor-pointer;
 }
