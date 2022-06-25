@@ -2,6 +2,8 @@ import React, { useReducer } from "react";
 import { Collapsible, CollapsibleProps } from "../Collapsible/Collapsible";
 import { accordionReducer, ActionTypeAccordion } from "./reducer/reducer";
 
+//TODO make it work so it works for more than two elements
+
 const initialState: Array<Boolean> = [false, false];
 
 export type options = "single" | "multi";

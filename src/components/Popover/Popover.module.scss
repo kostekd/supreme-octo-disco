@@ -1,0 +1,12 @@
+.popover{
+    @apply absolute bg-slate-50 font-sans p-3 rounded-sm shadow-md;
+
+    &--button {
+        @apply flex w-full justify-end;
+    }
+
+}
+
+.icon:hover{
+    @apply cursor-pointer;
+}
