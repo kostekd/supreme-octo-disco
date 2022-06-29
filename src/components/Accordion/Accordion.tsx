@@ -2,8 +2,6 @@ import React, { useReducer } from "react";
 import { Collapsible, CollapsibleProps } from "../Collapsible/Collapsible";
 import { accordionReducer, ActionTypeAccordion } from "./reducer/reducer";
 
-const initialState: Array<Boolean> = [false, false];
-
 export type options = "single" | "multi";
 
 export interface AccordionProps {
@@ -15,6 +13,7 @@ const Accordion = ({
   collapsibles,
   option = ActionTypeAccordion.Single,
 }: AccordionProps) => {
+  const initialState = Array.apply(null, Array(5)).map(Boolean.prototype.valueOf,false);
   const [state, dispatch] = useReducer(accordionReducer, initialState);
 
   return (
