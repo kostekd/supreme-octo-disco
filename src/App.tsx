@@ -29,7 +29,7 @@ function App() {
     dispatch(add(value));
   };
 
-  const {isOpen, handleModal} = useModal();
+  const { isOpen, handleModal } = useModal();
 
   return (
     <div className="App">
@@ -49,38 +49,37 @@ function App() {
           onClick={() =>
             toastService.success("What a bullcrap", { autoClose: 2000 })
           }
-          label="Success"
-        />
+        >
+          Success
+        </Button>
         <Button
           onClick={() =>
             toastService.warning("I have no idea what is going on")
           }
-          label="Warning"
-        />
-        <Button
-          onClick={() => toastService.error("You are dudu")}
-          label="Failure"
-        />
+        >
+          {" "}
+          Warning{" "}
+        </Button>
+        <Button onClick={() => toastService.error("You are dudu")}>
+          Essa byku
+        </Button>
         <button onClick={logInFunction}>Log In</button>
         <button onClick={logOutFunction}>Log Out</button>
         <button onClick={() => toggleNumber(5)}>Add 5</button>
         <button onClick={() => toggleNumber(10)}>Add 10</button>
         <button onClick={() => toggleNumber(-10)}>Subtract 10</button>
         <h1>{counter.value}</h1>
-        <Button
-          onClick={handleModal}
-          label="Show Modal"
-        />
+        <Button onClick={handleModal}> Handle Modal </Button>
         <Modal isOpen={isOpen} handleModal={handleModal}>
           <>
-          <h1>This is a cool modal what else do you got?</h1>
-          <p>We are the best and whatever you say we do it 10 times better</p>
-          <ol>
-            <li>Woda</li>
-            <li>Cola</li>
-            <li>Powermachine</li>
-          </ol>
-          <Button label="Hello Mordo"></Button>
+            <h1>This is a cool modal what else do you got?</h1>
+            <p>We are the best and whatever you say we do it 10 times better</p>
+            <ol>
+              <li>Woda</li>
+              <li>Cola</li>
+              <li>Powermachine</li>
+            </ol>
+            <Button>Hello Mordo</Button>
           </>
         </Modal>
       </header>

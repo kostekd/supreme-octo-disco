@@ -13,9 +13,9 @@ const Template: ComponentStory<typeof BaseToast> = () => {
 
   return (
     <>
-      <Button label="Success" onClick={() => {toastService.success("You did it!")}} />
-      <Button label="Warning" onClick={() => {toastService.warning("There has been an error!")}} />
-      <Button label="Error" onClick={() => {toastService.error("Something went horribly wrong!")}} />
+      <Button onClick={() => {toastService.success("You did it!")}} >Success</Button>
+      <Button onClick={() => {toastService.warning("There has been an error!")}} >Warning</Button>
+      <Button onClick={() => {toastService.error("Something went horribly wrong!")}}>Error</Button>
       <BaseToast/>
     </>
   );

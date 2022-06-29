@@ -6,10 +6,6 @@ export type ButtonSize = "small" | "medium" | "large";
 
 export interface ButtonProps {
   /**
-   * What label should be displayed on the button
-   */
-  label: string;
-  /**
    * What size should the button be?
    */
   size?: ButtonSize;
@@ -17,6 +13,14 @@ export interface ButtonProps {
    * What should happend when button is being clicked?
    */
   onClick?: () => void;
+  /**
+   * external className for custom styling
+   */
+  className?: string;
+  /**
+   * What label should be displayed on the button
+   */
+  children: React.ReactNode;
 }
 
 /**
@@ -25,10 +29,18 @@ export interface ButtonProps {
  * @description Primary button UI component
  */
 
-const Button = ({ label, size = "medium", onClick }: ButtonProps) => {
+const Button = ({
+  size = "medium",
+  onClick,
+  className,
+  children,
+}: ButtonProps) => {
   return (
-    <button className={cx(s[`button`], s[`button--${size}`])} onClick={onClick}>
-      {label}
+    <button
+      className={cx(className,s[`button`], s[`button--${size}`])}
+      onClick={onClick}
+    >
+      {children}
     </button>
   );
 };
