@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-    label: 'Create New',
+    children: 'Create New',
 }

@@ -17,7 +17,7 @@ const Template: ComponentStory<typeof Modal> = (args) => {
   return (
     <>
       <div id="test"></div>
-      <Button label="Show Modal" onClick={handleModal}/>
+      <Button onClick={handleModal}>Show Modal</Button>
       <Modal {...args} isOpen={isOpen} handleModal={handleModal} destination='#test'>
         <h3>This modal is generally awesome</h3>
         <ul>
@@ -27,7 +27,7 @@ const Template: ComponentStory<typeof Modal> = (args) => {
             <li>This is cool x8</li>
         </ul>
         <div>If you want you can close me from inside</div>
-        <Button label="Close Modal" size="small" onClick={handleModal}></Button>
+        <Button size="small" onClick={handleModal}>Close Modal</Button>
       </Modal>
     </>
   );
