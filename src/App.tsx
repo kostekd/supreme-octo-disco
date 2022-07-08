@@ -1,35 +1,35 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "./store";
-import { logIn, logOut } from "./store/reducers/authReducer/actions";
-import { add } from "./store/reducers/counterReducer/actions";
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from './store'
+import { logIn, logOut } from './store/reducers/authReducer/actions'
+import { add } from './store/reducers/counterReducer/actions'
 
-import { Button } from "./components/Button/Button";
-import { toastService } from "./components/Toast/toast";
-import { Modal } from "./components/Modal/Modal";
-import useModal from "./hooks/useModal";
+import { Button } from './components/Button/Button'
+import { toastService } from './components/Toast/toast'
+import { Modal } from './components/Modal/Modal'
+import useModal from './hooks/useModal'
 
-function App() {
+function App () {
   const authentication = useSelector(
     (state: RootState) => state.authentication
-  );
-  const counter = useSelector((state: RootState) => state.counter);
-  const dispatch = useDispatch();
+  )
+  const counter = useSelector((state: RootState) => state.counter)
+  const dispatch = useDispatch()
 
   const logInFunction = () => {
-    dispatch(logIn());
-  };
+    dispatch(logIn())
+  }
   const logOutFunction = () => {
-    dispatch(logOut());
-  };
+    dispatch(logOut())
+  }
 
   const toggleNumber = (value: number) => {
-    dispatch(add(value));
-  };
+    dispatch(add(value))
+  }
 
-  const { isOpen, handleModal } = useModal();
+  const { isOpen, handleModal } = useModal()
 
   return (
     <div className="App">
@@ -47,20 +47,20 @@ function App() {
         {authentication.isLoggedIn && <div> IsLoggedIn </div>}
         <Button
           onClick={() =>
-            toastService.success("What a bullcrap", { autoClose: 2000 })
+            toastService.success('What a bullcrap', { autoClose: 2000 })
           }
         >
           Success
         </Button>
         <Button
           onClick={() =>
-            toastService.warning("I have no idea what is going on")
+            toastService.warning('I have no idea what is going on')
           }
         >
-          {" "}
-          Warning{" "}
+          {' '}
+          Warning{' '}
         </Button>
-        <Button onClick={() => toastService.error("You are dudu")}>
+        <Button onClick={() => toastService.error('You are dudu')}>
           Essa byku
         </Button>
         <button onClick={logInFunction}>Log In</button>
@@ -84,7 +84,7 @@ function App() {
         </Modal>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
