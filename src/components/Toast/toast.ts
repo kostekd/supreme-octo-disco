@@ -15,17 +15,17 @@ interface ToastProps {
 const defaultToastSettings: Record<Severity, ToastProps> = {
   success: {
     icon: GoCheck,
-    className: cx(s.toast, s['toast--success']),
+    className: cx(s.toast, s["toast--success"]),
     autoClose: 3000,
   },
   warning: {
     icon: FiCheckCircle,
-    className: cx(s.toast, s['toast--warning']),
+    className: cx(s.toast, s["toast--warning"]),
     autoClose: 3000,
   },
   error: {
     icon: FiCheckCircle,
-    className: cx(s.toast, s['toast--error']),
+    className: cx(s.toast, s["toast--error"]),
     autoClose: 3000,
   },
 };
@@ -35,7 +35,10 @@ export const toastService: Record<
   (label: string, props?: ToastProps) => {}
 > = {
   success: (label, props) =>
-    toasts.success(label, { ...defaultToastSettings.success, ...props }),
+    toasts.success(label, {
+      ...defaultToastSettings.success,
+      ...props,
+    }),
   warning: (label, props) =>
     toasts.warn(label, { ...defaultToastSettings.warning, ...props }),
   error: (label, props) =>

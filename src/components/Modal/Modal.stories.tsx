@@ -16,18 +16,25 @@ const Template: ComponentStory<typeof Modal> = (args) => {
   const { isOpen, handleModal } = useModal();
   return (
     <>
-      <div id="test"></div>
+      <div id='test'></div>
       <Button onClick={handleModal}>Show Modal</Button>
-      <Modal {...args} isOpen={isOpen} handleModal={handleModal} destination='#test'>
+      <Modal
+        {...args}
+        isOpen={isOpen}
+        handleModal={handleModal}
+        destination='#test'
+      >
         <h3>This modal is generally awesome</h3>
         <ul>
-            <li>This is cool</li>
-            <li>This is cool x2</li>
-            <li>This is cool x4</li>
-            <li>This is cool x8</li>
+          <li>This is cool</li>
+          <li>This is cool x2</li>
+          <li>This is cool x4</li>
+          <li>This is cool x8</li>
         </ul>
         <div>If you want you can close me from inside</div>
-        <Button size="small" onClick={handleModal}>Close Modal</Button>
+        <Button size='small' onClick={handleModal}>
+          Close Modal
+        </Button>
       </Modal>
     </>
   );

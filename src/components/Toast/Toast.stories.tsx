@@ -10,13 +10,30 @@ export default {
 } as ComponentMeta<typeof BaseToast>;
 
 const Template: ComponentStory<typeof BaseToast> = () => {
-
   return (
     <>
-      <Button onClick={() => {toastService.success("You did it!")}} >Success</Button>
-      <Button onClick={() => {toastService.warning("There has been an error!")}} >Warning</Button>
-      <Button onClick={() => {toastService.error("Something went horribly wrong!")}}>Error</Button>
-      <BaseToast/>
+      <Button
+        onClick={() => {
+          toastService.success("You did it!");
+        }}
+      >
+        Success
+      </Button>
+      <Button
+        onClick={() => {
+          toastService.warning("There has been an error!");
+        }}
+      >
+        Warning
+      </Button>
+      <Button
+        onClick={() => {
+          toastService.error("Something went horribly wrong!");
+        }}
+      >
+        Error
+      </Button>
+      <BaseToast />
     </>
   );
 };

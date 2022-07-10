@@ -37,7 +37,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={cx(className,s[`button`], s[`button--${size}`])}
+      className={cx(className, s[`button`], s[`button--${size}`])}
       onClick={onClick}
     >
       {children}

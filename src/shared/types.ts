@@ -1,1 +1,1 @@
-export type Severity = 'success' | 'warning' | 'error';
+export type Severity = "success" | "warning" | "error";

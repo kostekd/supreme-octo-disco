@@ -2,7 +2,6 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Accordion } from "./Accordion";
-import { ActionTypeAccordion } from "./reducer/reducer";
 
 export default {
   component: Accordion,
