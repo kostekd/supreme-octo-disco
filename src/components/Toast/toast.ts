@@ -1,7 +1,7 @@
 import { Severity } from "../../shared/types";
 import { toast as toasts } from "react-toastify";
 import React, { ReactNode } from "react";
-import { FiCheckCircle } from "react-icons/fi";
+import { FiCheckCircle, FiXOctagon, FiAlertTriangle } from "react-icons/fi";
 import { GoCheck } from "react-icons/go";
 import s from "./Toast.module.scss";
 import cx from "classnames";
@@ -19,12 +19,12 @@ const defaultToastSettings: Record<Severity, ToastProps> = {
     autoClose: 3000,
   },
   warning: {
-    icon: FiCheckCircle,
+    icon: FiAlertTriangle,
     className: cx(s.toast, s["toast--warning"]),
     autoClose: 3000,
   },
   error: {
-    icon: FiCheckCircle,
+    icon: FiXOctagon,
     className: cx(s.toast, s["toast--error"]),
     autoClose: 3000,
   },
