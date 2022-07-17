@@ -1,5 +1,5 @@
 .toast{
-    @apply text-white font-semibold font-sans bg-red-600;
+    @apply text-white font-medium font-sans bg-red-600;
 
     &--success{
         @apply bg-green-500;

@@ -1,7 +1,7 @@
 import { Severity } from "../../shared/types";
 import { toast as toasts } from "react-toastify";
 import React, { ReactNode } from "react";
-import { FiCheckCircle, FiXOctagon, FiAlertTriangle } from "react-icons/fi";
+import { FiXOctagon, FiAlertTriangle } from "react-icons/fi";
 import { GoCheck } from "react-icons/go";
 import s from "./Toast.module.scss";
 import cx from "classnames";
