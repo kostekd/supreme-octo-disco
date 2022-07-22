@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import { BrowserRouter } from "react-router-dom";
 
 import { BaseToast } from "./components/Toast/BaseToast";
 
@@ -12,12 +13,12 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <Provider store={store}>
       <App />
       <BaseToast />
     </Provider>
-  </React.StrictMode>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
